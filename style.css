@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: url(./images/3468626.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+input {
+  padding: 0.5rem 1rem;
+}
+.input-section {
+  background: rgba(0, 0, 0, 0.6);
+
+  color: white;
+  position: relative;
+  height: auto;
+  width: 900px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+select {
+  padding: 0.5rem 1rem;
+}
+button {
+  padding: 0.5rem 1rem;
+}
+.displayscore span {
+  padding: 60px;
+}
