@@ -21,7 +21,7 @@ button.addEventListener("click", () => {
 
   arr.push(playerObj);
 
-  sortPlayers("descending");
+  sortPlayers();
   showplayers();
 
   firstinput.value = "";
@@ -31,11 +31,7 @@ button.addEventListener("click", () => {
 });
 
 function sortPlayers(order) {
-  if (order === "asc") {
-    arr.sort((a, b) => a.score - b.score);
-  } else {
-    arr.sort((a, b) => b.score - a.score);
-  }
+  arr.sort((a, b) => b.score - a.score);
 }
 
 function showplayers() {
@@ -70,23 +66,21 @@ function showplayers() {
     });
 
     plusfive.addEventListener("click", () => {
-      player.score = (player.score )+ 5;
-      sortPlayers("descending");
+      player.score = player.score + 5;
+      sortPlayers();
       showplayers();
     });
 
     minusfive.addEventListener("click", () => {
-      if(player.score<5){
+      if (player.score < 5) {
         alert("Score is less than 5");
-      }
-      else{
-      player.score = Math.max(0, player.score - 5);
-      sortPlayers("descending");
-      showplayers();
+      } else {
+        player.score = Math.max(0, player.score - 5);
+        sortPlayers();
+        showplayers();
       }
     });
 
     scoreboard.append(scorecard);
   });
 }
-
