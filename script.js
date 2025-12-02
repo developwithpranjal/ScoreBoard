@@ -18,7 +18,7 @@ button.addEventListener("click", () => {
     country: country,
     score: score,
   };
-  
+
   arr.push(playerObj);
 
   sortPlayers("descending");
@@ -76,9 +76,14 @@ function showplayers() {
     });
 
     minusfive.addEventListener("click", () => {
+      if(player.score<5){
+        alert("Score is less than 5");
+      }
+      else{
       player.score = Math.max(0, player.score - 5);
       sortPlayers("descending");
       showplayers();
+      }
     });
 
     scoreboard.append(scorecard);
